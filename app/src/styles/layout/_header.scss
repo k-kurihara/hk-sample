@@ -1,0 +1,26 @@
+@use "../utils/tokens" as *;
+@use "../utils/media" as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 20px 40px;
+}
+
+.logo {
+  font-size: 48px;
+  color: $color-primary;
+
+  @include mq(sp) {
+    color: #00f;
+  }
+}
+
+.header_links {
+  display: flex;
+  font-size: 24px;
+}
+.header_links > li {
+  margin-right: 35px;
+}

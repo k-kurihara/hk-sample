@@ -1,0 +1,38 @@
+@use 'sass:map';
+
+// 色
+$color-primary: #f19953;
+$color-secondary: #00CEC9;
+$color-bg: #F9F9F9;
+$color-text: #2D3436;
+
+// フォント
+$font-base: 'Noto Sans JP', sans-serif;
+$font-heading: 'Roboto', sans-serif;
+
+// フォントサイズ
+$font-size-base: 16px;
+$font-size-sm: 14px;
+$font-size-lg: 20px;
+
+// スペーシング
+$space-xs: 4px;
+$space-sm: 8px;
+$space-md: 16px;
+$space-lg: 32px;
+
+
+
+// 使い方
+// @use '../utils/tokens' as *;
+
+// .header {
+//   background-color: $color-primary;
+//   color: $color-bg;
+//   font-family: $font-heading;
+//   padding: $space-md;
+
+//   h1 {
+//     font-size: $font-size-lg;
+//   }
+// }

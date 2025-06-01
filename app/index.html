@@ -1,10 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <title>Webpack HTML SCSS</title>
+    <meta name="description" content="TODO: ここにページの説明を入れる" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO: タイトル</title>
+    <link rel="stylesheet" href="{{ cssPath }}" />
   </head>
   <body>
-    <div id="app"></div>
+    <div>{{> header }}</div>
+    <div>{{> kv }}</div>
+
+    <img src="/images/logo.png" alt="ロゴ画像" />
+    <script type="module" src="/src/main.js"></script>
+    <!-- <script src="/public/js/page-specific.js"></script> -->
   </body>
 </html>
