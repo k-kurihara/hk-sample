@@ -1,0 +1,11 @@
+# node modules
+node_modules/
+
+# macOSの不可視ファイル
+.DS_Store
+
+# Vite/webpackのビルド出力
+dist/
+
+# ロックファイル（任意で除外）
+package-lock.json
