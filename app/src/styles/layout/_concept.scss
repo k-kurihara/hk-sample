@@ -1,0 +1,94 @@
+.concept {
+  background-color: #fee64e;
+  padding: 40px 40px 20px;
+  margin-top: 40px;
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100vw;
+    height: 80px;
+    background-image: url(".././images/concept_bottom.png");
+     background-size: 100% 200%; 
+    background-position: 100% 65%;
+    background-repeat: repeat;
+  }
+}
+
+.concept_inner {
+  position: relative;
+  bottom: 0;
+  margin: 0 auto;
+  width: 1280px;
+  min-height: 800px;
+  background-image: url(".././images/concept_bg.png");
+  background-size: 1280px;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "kei";
+  span {
+    position: relative;
+    display: inline-block;
+    z-index: 0;
+    display: inline-block;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 20px;
+      background: linear-gradient(
+        to right,
+        #9febd0 0%,
+        #9febd0 20%,
+        #feff8a 60%,
+        #feff8a 100%
+      );
+      border-radius: 2px;
+      z-index: -1;
+    }
+  }
+}
+
+.concept_title {
+  margin: 0 auto;
+  width: 800px;
+  padding-top: 100px;
+  font-size: 48px;
+  line-height: 1.5;
+}
+
+.concept_desc {
+  text-align: center;
+  font-size: 28px;
+  width: 820px;
+  margin: 40px auto;
+  line-height: 1.2;
+}
+
+.concept_link {
+  margin-top: 20px;
+  a {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 60px;
+    font-size: 24px;
+    font-family: "kei";
+    text-align: center;
+    background-color: #fff;
+    border: 2px solid #000;
+    padding: 8px 0 5px;
+    transition: opacity 0.2s;
+  }
+
+  a:hover {
+    opacity: 0.6;
+  }
+}

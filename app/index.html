@@ -8,11 +8,16 @@
     <link rel="stylesheet" href="{{ cssPath }}" />
   </head>
   <body>
-    <div>{{> header }}</div>
+    <header>{{> header }}</header>
     <div>{{> kv }}</div>
 
-    <img src="/images/logo.png" alt="ロゴ画像" />
+    <section id="concept">{{> concept }}</section>
+
+
+    <section id="creator">{{> creator }}</section>
+
+
     <script type="module" src="/src/main.js"></script>
-    <!-- <script src="/public/js/page-specific.js"></script> -->
+    <footer>{{> footer }}</footer>
   </body>
 </html>

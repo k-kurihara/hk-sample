@@ -1,33 +1,50 @@
 /* kv */
 .kv {
-  padding: 30px;
-  background-color: #fee64e;
+  // background-color: #fee64e;
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center; /* 横方向中央 */
+  align-items: center; /* 縦方向中央 */
 }
 
 .kv_inner {
-  padding: 20px;
+  position: relative;
   background-color: #fff;
   display: flex;
   justify-content: center; /* 横方向中央 */
   align-items: center; /* 縦方向中央 */
-  height: calc(100vh - 200px);
+  height: 680px;
+  width: 1220px;
+  margin: 0 auto;
 }
 
 .kv_logo {
-  width: 600px;
+  width: 600px;  
+  margin-top: -40px;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.8s ease-out forwards;
+  animation-delay: 1.4s;
 }
 
-img {
-  width: 100%;
+.kv_line {
+  position :absolute;
+  bottom: 0;
+  display: inline-block;
+  width: 1220px;
+  height: 16px;
+  background-image: url(".././images/kv_line.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
 }
 
 .kv_panel {
   position: absolute;
-  width: calc(100vw - 100px);
-  height: calc(100vh - 200px);
+  top: 0;
+  left: 20px;
+  width: 100%;
+  height: 100%;
 }
 
 .kv_panel_bg {
@@ -45,16 +62,17 @@ img {
 }
 
 .kv_panel > li {
-  width: calc((100vw - 180px) / 5);
+  // width: calc((100vw - 180px) / 5);
+  width: 200px;
   position: absolute;
-  top: 0;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.8s ease-out forwards;
 }
 
 .kv_panel > li:nth-child(1) {
-  animation-delay: 0.4s;
+  // animation-delay: 0.4s;
+  animation-delay: 0s;
 }
 
 .kv_panel > li:nth-child(1) .kv_panel_bg {
@@ -63,8 +81,9 @@ img {
 
 .kv_panel > li:nth-child(2) {
   position: relative;
-  left: 200px;
-  animation-delay: 0.6s;
+  left: 240px;
+  // animation-delay: 0.6s;
+  animation-delay: 0.2s;
 }
 
 .kv_panel > li:nth-child(2) .kv_panel_bg {
@@ -73,8 +92,9 @@ img {
 
 .kv_panel > li:nth-child(3) {
   top: 0;
-  left: 400px;
-  animation-delay: 0.8s;
+  left: 480px;
+  // animation-delay: 0.8s;
+  animation-delay: 0.4s;
 }
 
 .kv_panel > li:nth-child(3) .kv_panel_bg {
@@ -83,8 +103,9 @@ img {
 
 .kv_panel > li:nth-child(4) {
   top: 0;
-  left: 600px;
-  animation-delay: 1s;
+  left: 720px;
+  // animation-delay: 1s;
+  animation-delay: 0.6s;
 }
 
 .kv_panel > li:nth-child(4) .kv_panel_bg {
@@ -93,8 +114,9 @@ img {
 
 .kv_panel > li:nth-child(5) {
   top: 0;
-  left: 800px;
-  animation-delay: 1.2s;
+  left: 960px;
+  // animation-delay: 1.2s;
+  animation-delay: 0.8s;
 }
 
 .kv_panel > li:nth-child(5) .kv_panel_bg {
@@ -102,9 +124,10 @@ img {
 }
 
 .kv_panel > li:nth-child(6) {
-  top: 200px;
-  left: 800px;
-  animation-delay: 1.4s;
+  top: 220px;
+  left: 960px;
+  // animation-delay: 1.4s;
+  animation-delay: 1s;
 }
 
 .kv_panel > li:nth-child(6) .kv_panel_bg {
@@ -113,9 +136,10 @@ img {
 }
 
 .kv_panel > li:nth-child(7) {
-  top: 400px;
-  left: 800px;
-  animation-delay: 1.6s;
+  bottom: 30px;
+  left: 960px;
+  // animation-delay: 1.6s;
+  animation-delay: 0;
 }
 
 .kv_panel > li:nth-child(7) .kv_panel_bg {
@@ -124,9 +148,10 @@ img {
 }
 
 .kv_panel > li:nth-child(8) {
-  top: 400px;
-  left: 600px;
-  animation-delay: 1.8s;
+  bottom: 30px;
+  left: 720px;
+  // animation-delay: 1.8s;
+  animation-delay: 0.2s;
 }
 
 .kv_panel > li:nth-child(8) .kv_panel_bg {
@@ -134,9 +159,10 @@ img {
 }
 
 .kv_panel > li:nth-child(9) {
-  top: 400px;
-  left: 400px;
-  animation-delay: 2s;
+  bottom: 30px;
+  left: 480px;
+  // animation-delay: 2s;
+  animation-delay: 0.4s;
 }
 
 .kv_panel > li:nth-child(9) .kv_panel_bg {
@@ -144,9 +170,10 @@ img {
 }
 
 .kv_panel > li:nth-child(10) {
-  top: 400px;
-  left: 200px;
-  animation-delay: 2.2s;
+  bottom: 30px;
+  left: 240px;
+  // animation-delay: 2.2s;
+  animation-delay: 0.6s;
 }
 
 .kv_panel > li:nth-child(10) .kv_panel_bg {
@@ -154,9 +181,10 @@ img {
 }
 
 .kv_panel > li:nth-child(11) {
-  top: 400px;
+  bottom: 30px;
   left: 0px;
-  animation-delay: 2.4s;
+  // animation-delay: 2.4s;
+  animation-delay: 0.8s;
 }
 
 .kv_panel > li:nth-child(11) .kv_panel_bg {
@@ -164,9 +192,10 @@ img {
 }
 
 .kv_panel > li:nth-child(12) {
-  top: 200px;
+  top: 220px;
   left: 0px;
-  animation-delay: 2.6s;
+  // animation-delay: 2.6s;
+  animation-delay: 1s;
 }
 
 .kv_panel > li:nth-child(12) .kv_panel_bg {
