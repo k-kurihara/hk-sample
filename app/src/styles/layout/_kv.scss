@@ -1,3 +1,5 @@
+@use ".././utils/media";
+
 /* kv */
 .kv {
   // background-color: #fee64e;
@@ -25,241 +27,21 @@
   }
 }
 
-// .kv_inner {
-//   position: relative;
-//   display: flex;
-//   justify-content: center; /* 横方向中央 */
-//   align-items: center; /* 縦方向中央 */
-//   height: 680px;
-//   width: 1220px;
-//   margin: 0 auto;
-// }
-
-// .kv_logo {
-//   width: 600px;
-//   margin-top: -40px;
-//   opacity: 0;
-//   transform: translateY(20px);
-//   animation: fadeUp 0.8s ease-out forwards;
-//   animation-delay: 1.4s;
-// }
-
-// .kv_line {
-//   position :absolute;
-//   bottom: 0;
-//   display: inline-block;
-//   width: 1220px;
-//   height: 16px;
-//   background-image: url(".././images/kv/line.png");
-//   background-size: contain;
-//   background-position: center;
-//   background-repeat: repeat;
-// }
-
-// .kv_panel {
-//   position: absolute;
-//   top: 0;
-//   left: 20px;
-//   width: 100%;
-//   height: 100%;
-// }
-
-// .kv_panel_bg {
-//   position: relative;
-//   padding: 20px;
-//   aspect-ratio: 1 / 1;
-//   margin-bottom: 10px;
-// }
-
-// .kv_panel_img {
-//   position: absolute;
-//   left: 20px;
-//   top: 0;
-//   width: 100%;
-// }
-
-// .kv_panel > li {
-//   // width: calc((100vw - 180px) / 5);
-//   width: 200px;
-//   position: absolute;
-//   opacity: 0;
-//   transform: translateY(20px);
-//   animation: fadeUp 0.8s ease-out forwards;
-// }
-
-// .kv_panel > li:nth-child(1) {
-//   // animation-delay: 0.4s;
-//   animation-delay: 0s;
-// }
-
-// .kv_panel > li:nth-child(1) .kv_panel_bg {
-//   background-color: #feeb8a;
-// }
-
-// .kv_panel > li:nth-child(2) {
-//   position: relative;
-//   left: 240px;
-//   // animation-delay: 0.6s;
-//   animation-delay: 0.2s;
-// }
-
-// .kv_panel > li:nth-child(2) .kv_panel_bg {
-//   background-color: #feb96c;
-// }
-
-// .kv_panel > li:nth-child(3) {
-//   top: 0;
-//   left: 480px;
-//   // animation-delay: 0.8s;
-//   animation-delay: 0.4s;
-// }
-
-// .kv_panel > li:nth-child(3) .kv_panel_bg {
-//   background-color: #ff8894;
-// }
-
-// .kv_panel > li:nth-child(4) {
-//   top: 0;
-//   left: 720px;
-//   // animation-delay: 1s;
-//   animation-delay: 0.6s;
-// }
-
-// .kv_panel > li:nth-child(4) .kv_panel_bg {
-//   background-color: #f09abf;
-// }
-
-// .kv_panel > li:nth-child(5) {
-//   top: 0;
-//   left: 960px;
-//   // animation-delay: 1.2s;
-//   animation-delay: 0.8s;
-// }
-
-// .kv_panel > li:nth-child(5) .kv_panel_bg {
-//   background-color: #c4b4d8;
-// }
-
-// .kv_panel > li:nth-child(6) {
-//   top: 220px;
-//   left: 960px;
-//   // animation-delay: 1.4s;
-//   animation-delay: 1s;
-// }
-
-// .kv_panel > li:nth-child(6) .kv_panel_bg {
-//   background-color: #fff;
-//   border: 2px solid #e2dceb;
-// }
-
-// .kv_panel > li:nth-child(7) {
-//   bottom: 30px;
-//   left: 960px;
-//   // animation-delay: 1.6s;
-//   animation-delay: 0;
-// }
-
-// .kv_panel > li:nth-child(7) .kv_panel_bg {
-//   background-color: #fff;
-//   border: 2px solid #939393;
-// }
-
-// .kv_panel > li:nth-child(8) {
-//   bottom: 30px;
-//   left: 720px;
-//   // animation-delay: 1.8s;
-//   animation-delay: 0.2s;
-// }
-
-// .kv_panel > li:nth-child(8) .kv_panel_bg {
-//   background-color: #939393;
-// }
-
-// .kv_panel > li:nth-child(9) {
-//   bottom: 30px;
-//   left: 480px;
-//   // animation-delay: 2s;
-//   animation-delay: 0.4s;
-// }
-
-// .kv_panel > li:nth-child(9) .kv_panel_bg {
-//   background-color: #b6ea94;
-// }
-
-// .kv_panel > li:nth-child(10) {
-//   bottom: 30px;
-//   left: 240px;
-//   // animation-delay: 2.2s;
-//   animation-delay: 0.6s;
-// }
-
-// .kv_panel > li:nth-child(10) .kv_panel_bg {
-//   background-color: #9ee7f9;
-// }
-
-// .kv_panel > li:nth-child(11) {
-//   bottom: 30px;
-//   left: 0px;
-//   // animation-delay: 2.4s;
-//   animation-delay: 0.8s;
-// }
-
-// .kv_panel > li:nth-child(11) .kv_panel_bg {
-//   background-color: #8dc1f4;
-// }
-
-// .kv_panel > li:nth-child(12) {
-//   top: 220px;
-//   left: 0px;
-//   // animation-delay: 2.6s;
-//   animation-delay: 1s;
-// }
-
-// .kv_panel > li:nth-child(12) .kv_panel_bg {
-//   background-color: #a4baeb;
-// }
-
-// /* アニメーション */
-// .fade-up {
-//   opacity: 0;
-//   transform: translateY(20px);
-//   animation: fadeUp 0.8s ease-out forwards;
-// }
-
-// @keyframes fadeUp {
-//   to {
-//     opacity: 1;
-//     transform: translateY(0);
-//   }
-// }
-
-// .lean {
-//   animation-delay: 1s;
-//   animation: lean 0.8s ease-out forwards;
-// }
-
-// @keyframes lean {
-//   0% {
-//     transform: rotate(0deg);
-//   }
-//   50% {
-//     transform: rotate(45deg);
-//   }
-//   100% {
-//     transform: rotate(0deg);
-//   }
-// }
-
 .kv_line {
   position: absolute;
   bottom: 0;
   display: inline-block;
-  width: 1220px;
+  // width: 1220px;
+  width: 73%;
   height: 16px;
   background-image: url(".././images/kv/line.png");
   background-size: contain;
   background-position: center;
   background-repeat: repeat;
+
+  left: 50%;
+  transform: translateX(-50%);
+
 }
 
 .kv_dummy {
@@ -381,7 +163,7 @@
   left: 60%;
   animation-delay: 0.6s;
   &:after {
-    background: #F09ABF;
+    background: #f09abf;
   }
 }
 
@@ -389,203 +171,74 @@
   left: 80%;
   animation-delay: 0.8s;
   &:after {
-    background: #FF8894;
+    background: #ff8894;
   }
 }
 
 .kv_panel > li:nth-child(6) {
-  top: 33%; 
+  top: 33%;
   left: 80%;
   animation-delay: 1s;
   &:after {
-    background: #FFB96C;
+    background: #ffb96c;
   }
 }
 
 .kv_panel > li:nth-child(7) {
-  top: 67%; 
+  top: 67%;
   left: 80%;
   animation-delay: 0s;
   &:after {
     background-color: #fff;
-    border: solid 2px #C8C8C8; 
+    border: solid 2px #c8c8c8;
   }
 }
 
 .kv_panel > li:nth-child(8) {
-  top: 67%; 
+  top: 67%;
   left: 60%;
   animation-delay: 0.2s;
   &:after {
-    background: #FFEB8A;
+    background: #ffeb8a;
   }
 }
 
 .kv_panel > li:nth-child(9) {
-  top: 67%; 
+  top: 67%;
   left: 40%;
   animation-delay: 0.4s;
   &:after {
     background-color: #fff;
-    border: solid 2px #C8C8C8; 
+    border: solid 2px #c8c8c8;
   }
 }
 
 .kv_panel > li:nth-child(10) {
-  top: 67%; 
+  top: 67%;
   left: 20%;
   animation-delay: 0.6s;
   &:after {
-    background: #5A5A5A;
+    background: #5a5a5a;
   }
 }
 
 .kv_panel > li:nth-child(11) {
-  top: 67%; 
+  top: 67%;
   left: 0;
   animation-delay: 0.8s;
   &:after {
-    background: #B6EA94;
+    background: #b6ea94;
   }
 }
 
 .kv_panel > li:nth-child(12) {
-  top: 33%; 
+  top: 33%;
   left: 0;
   animation-delay: 1s;
   &:after {
-    background: #9DE7F9;
+    background: #9de7f9;
   }
 }
-
-
-
-
-
-
-
-// .kv_panel > li:nth-child(2) {
-//   position: relative;
-//   left: 240px;
-//   // animation-delay: 0.6s;
-//   animation-delay: 0.2s;
-// }
-
-// .kv_panel > li:nth-child(2) .kv_panel_bg {
-//   background-color: #feb96c;
-// }
-
-// .kv_panel > li:nth-child(3) {
-//   top: 0;
-//   left: 480px;
-//   // animation-delay: 0.8s;
-//   animation-delay: 0.4s;
-// }
-
-// .kv_panel > li:nth-child(3) .kv_panel_bg {
-//   background-color: #ff8894;
-// }
-
-// .kv_panel > li:nth-child(4) {
-//   top: 0;
-//   left: 720px;
-//   // animation-delay: 1s;
-//   animation-delay: 0.6s;
-// }
-
-// .kv_panel > li:nth-child(4) .kv_panel_bg {
-//   background-color: #f09abf;
-// }
-
-// .kv_panel > li:nth-child(5) {
-//   top: 0;
-//   left: 960px;
-//   // animation-delay: 1.2s;
-//   animation-delay: 0.8s;
-// }
-
-// .kv_panel > li:nth-child(5) .kv_panel_bg {
-//   background-color: #c4b4d8;
-// }
-
-// .kv_panel > li:nth-child(6) {
-//   top: 220px;
-//   left: 960px;
-//   // animation-delay: 1.4s;
-//   animation-delay: 1s;
-// }
-
-// .kv_panel > li:nth-child(6) .kv_panel_bg {
-//   background-color: #fff;
-//   border: 2px solid #e2dceb;
-// }
-
-// .kv_panel > li:nth-child(7) {
-//   bottom: 30px;
-//   left: 960px;
-//   // animation-delay: 1.6s;
-//   animation-delay: 0;
-// }
-
-// .kv_panel > li:nth-child(7) .kv_panel_bg {
-//   background-color: #fff;
-//   border: 2px solid #939393;
-// }
-
-// .kv_panel > li:nth-child(8) {
-//   bottom: 30px;
-//   left: 720px;
-//   // animation-delay: 1.8s;
-//   animation-delay: 0.2s;
-// }
-
-// .kv_panel > li:nth-child(8) .kv_panel_bg {
-//   background-color: #939393;
-// }
-
-// .kv_panel > li:nth-child(9) {
-//   bottom: 30px;
-//   left: 480px;
-//   // animation-delay: 2s;
-//   animation-delay: 0.4s;
-// }
-
-// .kv_panel > li:nth-child(9) .kv_panel_bg {
-//   background-color: #b6ea94;
-// }
-
-// .kv_panel > li:nth-child(10) {
-//   bottom: 30px;
-//   left: 240px;
-//   // animation-delay: 2.2s;
-//   animation-delay: 0.6s;
-// }
-
-// .kv_panel > li:nth-child(10) .kv_panel_bg {
-//   background-color: #9ee7f9;
-// }
-
-// .kv_panel > li:nth-child(11) {
-//   bottom: 30px;
-//   left: 0px;
-//   // animation-delay: 2.4s;
-//   animation-delay: 0.8s;
-// }
-
-// .kv_panel > li:nth-child(11) .kv_panel_bg {
-//   background-color: #8dc1f4;
-// }
-
-// .kv_panel > li:nth-child(12) {
-//   top: 220px;
-//   left: 0px;
-//   // animation-delay: 2.6s;
-//   animation-delay: 1s;
-// }
-
-// .kv_panel > li:nth-child(12) .kv_panel_bg {
-//   background-color: #a4baeb;
-// }
 
 /* アニメーション */
 .fade-up {

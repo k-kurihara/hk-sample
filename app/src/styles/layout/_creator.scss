@@ -1,3 +1,5 @@
+@use ".././utils/media";
+
 .creator {
   position: relative;
   background-image: url(".././images/creator/repeat_bg.png");
@@ -7,7 +9,10 @@
   background-repeat: repeat;
   background-size: auto 50%;
   animation: scroll-bg 20s linear infinite;
-
+  @include media.mq(tab) {
+    background-size: 300px;
+    animation: scroll-bg 40s linear infinite;
+  }
 
   /* 上側：右向きの三角形 */
   &::before {
@@ -20,6 +25,12 @@
     border-top: 200px solid transparent;
     border-bottom: 300px solid transparent;
     border-right: 500px solid #c5c5fb; /* → 尖った部分が左向き */
+    @include media.mq(tab) {
+      top: -35px;
+      border-top: 50px solid transparent;
+      border-bottom: 50px solid transparent;
+      border-right: 100px solid #c5c5fb; /* → 尖った部分が左向き */
+    }
   }
 
   /* 下側：左向きの三角形 */
@@ -33,6 +44,12 @@
     border-top: 300px solid transparent;
     border-bottom: 200px solid transparent;
     border-left: 500px solid #cee3fe; /* → 尖った部分が右向き */
+    @include media.mq(tab) {
+      bottom: -75px;
+      border-top: 50px solid transparent;
+      border-bottom: 50px solid transparent;
+      border-left: 100px solid #cee3fe; /* → 尖った部分が右向き */
+    }
   }
 }
 
@@ -46,8 +63,14 @@
   text-align: center;
   position: relative;
   z-index: 2;
+  @include media.mq(tab) {
+    margin-top: 10px;
+  }
   img {
     width: 650px;
+    @include media.mq(tab) {
+      width: 65%;
+    }
   }
 }
 
@@ -56,10 +79,17 @@
   font-family: "kei";
   margin-top: 80px;
   text-align: center;
+  @include media.mq(tab) {
+    margin-top: 20px;
+    font-size: 1rem;
+  }
 }
 
 .creator_gallary {
   margin-top: 100px;
+  @include media.mq(tab) {
+    margin-top: 40px;
+  }
 }
 
 .creator_gallary_title {
@@ -71,6 +101,11 @@
     letter-spacing: 10px;
     font-size: 90px;
     font-family: "kei";
+    @include media.mq(tab) {
+      font-size: 2rem;
+      line-height: 1.5;
+      display: inline;
+    }
 
     /* 上側：右向きの三角形 */
     &::before {
@@ -84,6 +119,9 @@
       border-bottom: 10px solid transparent;
       border-right: 50px solid #ec70a7; /* → 尖った部分が左向き */
       transform: rotate(-125deg);
+      @include media.mq(tab) {
+        left: -45%;
+      }
     }
 
     /* 下側：左向きの三角形 */
@@ -98,12 +136,18 @@
       border-bottom: 10px solid transparent;
       border-right: 50px solid #ec70a7; /* → 尖った部分が左向き */
       transform: rotate(-50deg);
+      @include media.mq(tab) {
+        right: -33%;
+      }
     }
   }
 }
 .creator_gallary_sub_title {
   text-align: center;
   margin-top: 30px;
+  @include media.mq(tab) {
+    margin-top: 10px;
+  }
   span {
     display: inline-block;
     margin: 0 auto;
@@ -112,6 +156,10 @@
     color: #fff;
     background-color: #ec70a7;
     padding: 5px 100px;
+    @include media.mq(tab) {
+      font-size: 1rem;
+      padding: 5px 20px;
+    }
   }
 }
 
@@ -123,8 +171,10 @@
 .swiper {
   margin: 60px auto 0;
   // max-width: 1200px;
+  @include media.mq(tab) {
+    margin: 40px auto 0;
+  }
 }
-
 
 .swiper-button-prev,
 .swiper-button-next {
@@ -136,6 +186,11 @@
   height: 30px;
   background: none;
   cursor: pointer;
+  @include media.mq(tab) {
+    display: none !important;
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .swiper-button-prev::after,
@@ -153,25 +208,34 @@
   border-bottom: 25px solid transparent;
   border-right: 50px solid #ec70a7;
   // transform: rotate(-125deg);
+  @include media.mq(tab) {
+    left: 20px !important;
+  }
 }
 
 .swiper-button-next {
   content: "";
   position: absolute;
-  right: 100px!important;
+  right: 100px !important;
   width: 0;
   height: 0;
   border-top: 25px solid transparent;
   border-bottom: 25px solid transparent;
   border-left: 50px solid #ec70a7;
+  @include media.mq(tab) {
+    right: 20px !important;
+  }
 }
 
 .swiper-pagination {
   margin: 50px 0;
-  position: relative!important;
+  position: relative !important;
   bottom: 10px;
-  text-align: center!important;
+  text-align: center !important;
   z-index: 10;
+  @include media.mq(tab) {
+    margin: 25px 0;
+  }
 }
 
 .swiper-pagination-bullet {
@@ -181,11 +245,11 @@
   display: inline-block;
   margin: 0 4px;
   border-radius: 50%;
-  cursor: pointer!important;
+  cursor: pointer !important;
 }
 
 .swiper-pagination-bullet-active {
-  background: #ec70a7!important; 
+  background: #ec70a7 !important;
 }
 
 // ■ ■ ■ スライダー設定 end ■ ■ ■
@@ -195,6 +259,10 @@
   align-items: center;
   margin: 0 auto;
   max-width: 1000px;
+  @include media.mq(tab) {
+    display: block;
+    max-width: 100%;
+  }
 }
 
 .creator_gallary_card {
@@ -203,6 +271,12 @@
   position: relative;
   flex: 0 0 50%;
   padding: 0 30px 30px 0;
+  @include media.mq(tab) {
+    width: 90%;
+    flex: auto;
+    margin: 0 auto;
+    padding: 0 20px 20px 0;
+  }
 
   &:after {
     content: "";
@@ -215,6 +289,12 @@
     // F09ABF
     border: solid 2px #3c3c3c;
     z-index: -1;
+    @include media.mq(tab) {
+      top: 15px;
+      left: 15px;
+      width: 95%;
+      height: 97%;
+    }
   }
 
   img {
@@ -223,106 +303,98 @@
     border: solid 2px #3c3c3c;
     // border-radius: 4px;
   }
-
 }
 
 .swiper-wrapper .swiper-slide {
   display: block !important;
 }
 
-
-
 // ほし　https://x.com/hoshi_u3（8月更新）#FFEB8A
 .swiper-wrapper .swiper-slide.item1 {
-  .creator_gallary_card:after{
-    background: #FFEB8A;
+  .creator_gallary_card:after {
+    background: #ffeb8a;
   }
 }
 
 // 三つ葉ちょこ　https://www.youtube.com/channel/UCVIxsmwsAIDe6a91XxdYCew（6月15日更新）#FF8894
 .swiper-wrapper .swiper-slide.item2 {
-  .creator_gallary_card:after{
-    background: #FF8894;
+  .creator_gallary_card:after {
+    background: #ff8894;
   }
 }
-
 
 //  ゆがー　https://x.com/yugirlpict #F09ABF
 .swiper-wrapper .swiper-slide.item3 {
-  .creator_gallary_card:after{
-    background: #F09ABF;
+  .creator_gallary_card:after {
+    background: #f09abf;
   }
 }
-
 
 // 小日向ほしみ　https://x.com/deepstarhoshimi #A4BAEA
 .swiper-wrapper .swiper-slide.item4 {
-  .creator_gallary_card:after{
-    background: #A4BAEA;
+  .creator_gallary_card:after {
+    background: #a4baea;
   }
 }
-
 
 // 空維深夜　https://x.com/tears39_kenzen #8EC1F4
 .swiper-wrapper .swiper-slide.item5 {
-  .creator_gallary_card:after{
-    background: #8EC1F4;
+  .creator_gallary_card:after {
+    background: #8ec1f4;
   }
 }
-
 
 // もちつきうさ　https://x.com/Usa3Motituki #9DE7F9
 .swiper-wrapper .swiper-slide.item6 {
-  .creator_gallary_card:after{
-    background: #9DE7F9;
+  .creator_gallary_card:after {
+    background: #9de7f9;
   }
 }
 
-
 // yuuma　https://x.com/12yuuma24 #B6EA94
 .swiper-wrapper .swiper-slide.item7 {
-  .creator_gallary_card:after{
-    background: #B6EA94;
+  .creator_gallary_card:after {
+    background: #b6ea94;
   }
 }
 
 // 中津コン　https://x.com/KonNakatsu #FFB96C
 .swiper-wrapper .swiper-slide.item8 {
-  .creator_gallary_card:after{
-    background: #FFB96C;
+  .creator_gallary_card:after {
+    background: #ffb96c;
   }
 }
 
-
 // 恋小いろり　https://x.com/ilolikoiko #816B9E
 .swiper-wrapper .swiper-slide.item9 {
-  .creator_gallary_card:after{
-    background: #816B9E;
+  .creator_gallary_card:after {
+    background: #816b9e;
   }
 }
 
 // ちな　https://x.com/Siro_Omochi1226 #fff （6/8中）
 .swiper-wrapper .swiper-slide.item10 {
-  .creator_gallary_card:after{
+  .creator_gallary_card:after {
     background: #fff;
   }
 }
 
 // ワタナベサワーB #5A5A5A
 .swiper-wrapper .swiper-slide.item11 {
-  .creator_gallary_card:after{
-    background: #5A5A5A;
+  .creator_gallary_card:after {
+    background: #5a5a5a;
   }
 }
-
-
-
-
 
 .creator_gallary_intro {
   width: 50%;
   padding-left: 50px;
   position: relative;
+  @include media.mq(tab) {
+    width: 90%;
+    padding: 0;
+    margin: 30px auto 0;
+  }
   &::after {
     content: "";
     position: absolute;
@@ -334,6 +406,9 @@
     background: #faf4a6; /* 丸の色 */
     border-radius: 50%;
     z-index: -100;
+    @include media.mq(tab) {
+      display: none;
+    }
   }
 }
 
@@ -347,22 +422,34 @@
 .creator_gallary_intro_title_name {
   font-size: 42px;
   font-family: "kei";
+  @include media.mq(tab) {
+    font-size: 1.5rem;
+  }
 }
 
 .creator_gallary_intro_title_link {
-  a{
+  a {
     display: inline-block;
   }
   img {
     width: 30px;
+    @include media.mq(tab) {
+      width: 20px;
+    }
   }
-  .youtube{
-    width: 50px;    
+  .youtube {
+    width: 50px;
+    @include media.mq(tab) {
+      width: 40px;
+    }
   }
 }
 
 .creator_gallary_intro_title_line {
   margin-top: 20px;
+  @include media.mq(tab) {
+    margin-top: 10px;
+  }
   svg {
     width: 100%;
   }
@@ -373,6 +460,10 @@
   font-size: 20px;
   font-family: "kosugi";
   line-height: 1.5;
+  @include media.mq(tab) {
+    margin-top: 20px;
+    font-size: 1rem;
+  }
 }
 
 @keyframes scroll-bg {

@@ -1,9 +1,18 @@
+@use ".././utils/media";
+
 .event_expo {
   max-width: 1200px;
   margin: 0 auto;
+  @include media.mq(tab) {
+    max-width: 100%;
+  }
 }
 
 .event_store {
   max-width: 800px;
   margin: 100px auto;
+  @include media.mq(tab) {
+    max-width: 80%;
+    margin: 40px auto;
+  }
 }

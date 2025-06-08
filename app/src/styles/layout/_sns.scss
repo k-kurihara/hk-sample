@@ -1,3 +1,5 @@
+@use ".././utils/media";
+
 .sns {
 }
 
@@ -7,6 +9,9 @@
   z-index: 2;
   img {
     width: 650px;
+    @include media.mq(tab) {
+      width: 90%;
+    }
   }
 }
 
@@ -18,8 +23,16 @@
   margin-bottom: -2px;
   width: 450px;
   margin: 0 auto;
+  @include media.mq(tab) {
+    width: 90%;
+    margin-top: -30px;
+  }
+
   img {
     width: 450px;
+    @include media.mq(tab) {
+      width: 100%;
+    }
   }
 }
 
@@ -32,9 +45,16 @@
   overflow-y: scroll;
   top: 80px;
   left: 50px;
-
   display: flex;
   justify-content: center; /* → 中央に寄せる */
+
+  @include media.mq(tab) {
+    width: 80%;
+    height: 80%;
+    top: 17%;
+    left: 10%;
+  }
+
   .twitter-tweet {
     max-width: 100% !important;
     width: 100% !important;

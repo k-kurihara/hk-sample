@@ -1,27 +1,67 @@
-<div class="header">
+<div>
+  {{! TODO: 追従にする }}
+  <div class="is-pc">
+    <div class="header">
+      <div class="logo">
+        <img src="images/logo.png" alt="" />
+      </div>
+      <div>
+        <ul class="header_links mini-wakuwaku">
+          <li>
+            <a href="#concept">
+              CONCEPT
+            </a>
+          </li>
+          <li class="header_goods">
+            <a href="https://hk-project.com/" target="_blank">
+              <span class="header_goods_text">GOODS</span>
+              <span class="header_goods_img"><img
+                  src="images/header_goods.png"
+                  alt=""
+                /></span>
+            </a>
+          </li>
+          <li><a href="#gallary">GALLARY</a></li>
+          <li><a href="#event">EVENT</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-  {{!-- TODO: 追従にする --}}
-  <div class="logo is-visible">
-    <img src="images/logo.png" alt="" />
+  <div class="is-sp">
+    <div class="header">
+
+      <div class="logo"><img src="images/logo.png" alt="" /></div>
+
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav mini-wakuwaku" id="nav">
+        <ul>
+          <li>
+            <a href="#concept">
+              CONCEPT
+            </a>
+          </li>
+          <li class="header_goods"><a href="https://hk-project.com/" target="_blank">
+              <span class="header_goods_text">GOODS</span>
+              <span class="header_goods_img"><img
+                  src="images/header_goods.png"
+                  alt=""
+                /></span>
+            </a></li>
+          <li><a href="#gallary">GALLARY</a></li>
+          <li><a href="#event">EVENT</a></li>
+        </ul>
+      </nav>
+    </div>
+
   </div>
-  <div>
-    <ul class="header_links mini-wakuwaku">
-      <li>
-        <a href="#concept">
-          CONCEPT
-        </a>
-      </li>
-      <li class="header_goods">
-        <a href="https://hk-project.com/" target="_blank">
-          <span class="header_goods_text">GOODS</span>
-          <span class="header_goods_img"><img
-              src="images/header_goods.png"
-              alt=""
-            /></span>
-        </a>
-      </li>
-      <li><a href="#gallary">GALLARY</a></li>
-      <li><a href="#event">EVENT</a></li>
-    </ul>
-  </div>
+
+  {{! TODO: 消す }}
+  <span class="is-open is-visible"><span></span><span></span><span></span></span>
+
 </div>

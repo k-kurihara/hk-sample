@@ -1,17 +1,25 @@
+@use ".././utils/media";
+
 .footer {
   background-color: #fee64e;
   padding: 60px 30px 30px;
-  a{
-    transition: opacity .2s;    
+  @include media.mq(tab) {
+    padding: 30px 15px 15px;
+  }
+  a {
+    transition: opacity 0.2s;
   }
   a:hover {
-    opacity: .6;
+    opacity: 0.6;
   }
 }
 .footer_title {
   font-size: 48px;
   font-family: "kei";
   text-align: center;
+  @include media.mq(tab) {
+    font-size: 2rem;
+  }
 }
 
 .footer_links {
@@ -20,6 +28,11 @@
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
+  @include media.mq(tab) {
+    margin-top: 30px;
+    width: 80%;
+    display: block;
+  }
 }
 
 .footer_link_1 {
@@ -32,8 +45,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @include media.mq(tab) {
+    width: 100%;
+    height: 40px;
+  }
   img {
     width: 140px;
+    @include media.mq(tab) {
+      width: 100px;
+    }
   }
 }
 
@@ -45,14 +65,23 @@
   height: 60px;
   font-size: 32px;
   font-family: "kei";
-  color: #fff!important;
+  color: #fff !important;
   text-align: center;
   background-color: #c0143c;
   padding: 8px 0 5px;
+  @include media.mq(tab) {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+  }
 }
 
 .footer_inquiry {
   margin-top: 60px;
+  @include media.mq(tab) {
+    margin-top: 30px;
+  }
   a {
     display: flex;
     margin: 0 auto;
@@ -66,12 +95,21 @@
     background-color: #fff;
     border: 2px solid #000;
     padding: 8px 0 5px;
+    @include media.mq(tab) {
+    width: 65%;
+    font-size: 1rem;
+    height: 40px;
+
+    }
   }
 }
 
 .footer_copy {
   margin-top: 40px;
   text-align: center;
+  @include media.mq(tab) {
+    margin-top: 20px;
+  }
   &_line {
     display: inline-block;
     width: 100%;
@@ -85,8 +123,12 @@
     width: 200px;
   }
 }
-.footer_copy_txt{
+.footer_copy_txt {
   margin-top: 30px;
   font-size: 20px;
   font-family: "kosugi";
+  @include media.mq(tab) {
+    margin-top: 15px;
+    font-size: 0.8rem;
+  }
 }

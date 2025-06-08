@@ -56,6 +56,18 @@ setTimeout(()=>{
 
 }, 1000)
 
+
+
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('nav');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('is-open');
+  nav.classList.toggle('is-open');
+});
+
+
+
 // window.addEventListener('load', () => {
 //   const tweets = document.querySelectorAll('iframe[src*="twitter.com"]');
 //   tweets.forEach(iframe => {
