@@ -1,0 +1,57 @@
+.local{
+  position: relative;
+  background-color: #C5C5FB;
+  background-image: url(".././images/creator/bg.png");
+  background-size: 1280px;
+  background-position: center;
+  // background-repeat: repeat;
+
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  animation: scroll-bg 20s linear infinite;
+}
+
+
+.local_title {
+  text-align: center;
+  position: relative;
+  left: -300px;
+  z-index: 2;
+  img {
+    width: 650px;
+  }
+}
+
+.local_inner{
+    // width: 1000px;
+    margin: 0 auto;
+}
+
+.local_copy{
+    width: 1200px;
+    margin: 30px auto 0;
+}
+
+.creator_desc {
+  font-size: 28px;
+  font-family: "kei";
+  margin-top: 80px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.local_support {
+    width: 1200px;
+    margin: 30px auto 0;
+}
+
+
+
+@keyframes scroll-bg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}

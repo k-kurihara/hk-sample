@@ -3,13 +3,19 @@ import handlebars from "vite-plugin-handlebars";
 import { resolve } from "path";
 
 export default defineConfig({
-  base: './',
+  base: "./",
   plugins: [
     handlebars({
       partialDirectory: resolve(__dirname, "src/layouts"),
       context: {
         heading: "共通見出し",
-        cssPath: "assets/main.css", // ← HTML内で使う用
+        cssPath: "assets/main.css",
+        tweets: [
+          
+          "https://twitter.com/akazukin870421/status/1858831692234191163?ref_src=twsrc%5Etfw",
+          "https://twitter.com/akazukin870421/status/1796952690905534908?ref_src=twsrc%5Etfw",
+          "https://twitter.com/akazukin870421/status/1796952690905534908?ref_src=twsrc%5Etfw",
+        ],
       },
     }),
   ],
@@ -32,6 +38,7 @@ export default defineConfig({
           }
           return "assets/[name].[hash].[ext]";
         },
+        // entryFileNames: "assets/main.js",
       },
     },
     minify: "terser",

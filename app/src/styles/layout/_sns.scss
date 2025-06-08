@@ -1,0 +1,51 @@
+.sns {
+}
+
+.sns_title {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  img {
+    width: 650px;
+  }
+}
+
+.sns_embed_area {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  margin-top: -100px;
+  width: 450px;
+  margin: 0 auto;
+  img {
+    width: 450px;
+  }
+}
+
+.sns_embed {
+  position: absolute;
+  width: 350px;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 5px;
+  overflow-y: scroll;
+  top: 80px;
+  left: 50px;
+
+  display: flex;
+  justify-content: center; /* → 中央に寄せる */
+  .twitter-tweet {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box;
+  }
+  iframe {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box;
+  }
+}

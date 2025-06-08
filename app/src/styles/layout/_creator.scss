@@ -1,14 +1,55 @@
 .creator {
-    margin-top: 100px;   
+  position: relative;
+  background-image: url(".././images/creator/bg.png");
+  background-size: 1280px;
+  background-position: center;
+  // background-repeat: repeat;
+
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  animation: scroll-bg 20s linear infinite;
+
+  // background-repeat: repeat-x;             /* 横方向に繰り返す */
+  // background-position: 0 0;
+  // animation: scroll-bg 20s linear infinite;
+
+  /* 上側：右向きの三角形 */
+  &::before {
+    content: "";
+    position: absolute;
+    top: -200px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 200px solid transparent;
+    border-bottom: 300px solid transparent;
+    border-right: 500px solid #c5c5fb; /* → 尖った部分が左向き */
+  }
+
+  /* 下側：左向きの三角形 */
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -250px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 300px solid transparent;
+    border-bottom: 200px solid transparent;
+    border-left: 500px solid #cee3fe; /* → 尖った部分が右向き */
+  }
 }
 
 .creator_inner {
-    margin: auto;
-    // width: 200px;
+  margin: auto;
+  // width: 200px;
 }
 
-
-.creator_title{
+.creator_title {
+  margin-top: 30px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
   img {
     width: 650px;
   }
@@ -16,67 +57,326 @@
 
 .creator_desc {
   font-size: 28px;
-font-family: "kei";
+  font-family: "kei";
+  margin-top: 80px;
+  text-align: center;
 }
 
+.creator_gallary {
+  margin-top: 100px;
+}
 
+.creator_gallary_title {
+  text-align: center;
 
+  span {
+    display: inline-block;
+    position: relative;
+    letter-spacing: 10px;
+    font-size: 90px;
+    font-family: "kei";
 
+    /* 上側：右向きの三角形 */
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 20px;
+      left: -75px;
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 50px solid #ec70a7; /* → 尖った部分が左向き */
+      transform: rotate(-125deg);
+    }
 
+    /* 下側：左向きの三角形 */
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 20px;
+      right: -75px;
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 50px solid #ec70a7; /* → 尖った部分が左向き */
+      transform: rotate(-50deg);
+    }
+  }
+}
+.creator_gallary_sub_title {
+  text-align: center;
+  margin-top: 30px;
+  span {
+    display: inline-block;
+    margin: 0 auto;
+    font-family: "kei";
+    font-size: 20px;
+    color: #fff;
+    background-color: #ec70a7;
+    padding: 5px 100px;
+  }
+}
 
-.slider {
+// ■ ■ ■ スライダー設定 start ■ ■ ■
+.swiper-wrap {
   position: relative;
-  width: 600px;
-  height: 400px;
-  margin: auto;
-  overflow: hidden;
 }
 
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  z-index: 0;
+.swiper {
+  margin: 60px auto 0;
+  max-width: 1200px;
 }
 
-.slide.active {
-  opacity: 1;
-  z-index: 1;
-}
 
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-button.prev,
-button.next {
+.swiper-button-prev,
+.swiper-button-next {
   position: absolute;
   top: 50%;
-  border: none;
-  padding: 8px 16px;
+  // transform: translateY(-50%);
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  background: none;
   cursor: pointer;
-  z-index: 2;
+}
 
-    width: 0;
-    height: 0;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-right: 20px solid #EC70A7;
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
 
+.swiper-button-prev {
+  content: "";
+  position: absolute;
+  left: 100px !important;
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-right: 50px solid #ec70a7;
+  // transform: rotate(-125deg);
+}
+
+.swiper-button-next {
+  content: "";
+  position: absolute;
+  right: 100px!important;
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 50px solid #ec70a7;
+}
+
+.swiper-pagination {
+  margin: 50px 0;
+  position: relative!important;
+  bottom: 10px;
+  text-align: center!important;
+  z-index: 10;
+}
+
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  background: #999 !important;
+  display: inline-block;
+  margin: 0 4px;
+  border-radius: 50%;
+  cursor: pointer!important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ec70a7!important; 
+}
+
+// ■ ■ ■ スライダー設定 end ■ ■ ■
+
+.creator_gallary_area {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.creator_gallary_card {
+  width: 50%;
+  position: relative;
+  flex: 0 0 50%;
+  padding: 0 30px 30px 0;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    width: 95%;
+    height: 95%;
+    // background: #ffb96c;
+    // F09ABF
+    border: solid 2px #3c3c3c;
+    z-index: -1;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+    border: solid 2px #3c3c3c;
+    // border-radius: 4px;
+  }
 
 }
 
-button.prev {
-  left: 10px;
+.swiper-wrapper .swiper-slide {
+  display: block !important;
 }
 
-button.next {
-  right: 10px;
+
+
+// ほし　https://x.com/hoshi_u3（8月更新）#FFEB8A
+.swiper-wrapper .swiper-slide.item1 {
+  .creator_gallary_card:after{
+    background: #FFEB8A;
+  }
 }
 
+// 三つ葉ちょこ　https://www.youtube.com/channel/UCVIxsmwsAIDe6a91XxdYCew（6月15日更新）#FF8894
+.swiper-wrapper .swiper-slide.item2 {
+  .creator_gallary_card:after{
+    background: #FF8894;
+  }
+}
+
+
+//  ゆがー　https://x.com/yugirlpict #F09ABF
+.swiper-wrapper .swiper-slide.item3 {
+  .creator_gallary_card:after{
+    background: #F09ABF;
+  }
+}
+
+
+// 小日向ほしみ　https://x.com/deepstarhoshimi #A4BAEA
+.swiper-wrapper .swiper-slide.item4 {
+  .creator_gallary_card:after{
+    background: #A4BAEA;
+  }
+}
+
+
+// 空維深夜　https://x.com/tears39_kenzen #8EC1F4
+.swiper-wrapper .swiper-slide.item5 {
+  .creator_gallary_card:after{
+    background: #8EC1F4;
+  }
+}
+
+
+// もちつきうさ　https://x.com/Usa3Motituki #9DE7F9
+.swiper-wrapper .swiper-slide.item6 {
+  .creator_gallary_card:after{
+    background: #9DE7F9;
+  }
+}
+
+
+// yuuma　https://x.com/12yuuma24 #B6EA94
+.swiper-wrapper .swiper-slide.item7 {
+  .creator_gallary_card:after{
+    background: #B6EA94;
+  }
+}
+
+// 中津コン　https://x.com/KonNakatsu #FFB96C
+.swiper-wrapper .swiper-slide.item8 {
+  .creator_gallary_card:after{
+    background: #FFB96C;
+  }
+}
+
+
+// 恋小いろり　https://x.com/ilolikoiko #816B9E
+.swiper-wrapper .swiper-slide.item9 {
+  .creator_gallary_card:after{
+    background: #816B9E;
+  }
+}
+
+// ちな　https://x.com/Siro_Omochi1226 #fff （6/8中）
+.swiper-wrapper .swiper-slide.item10 {
+  .creator_gallary_card:after{
+    background: #fff;
+  }
+}
+
+// ワタナベサワーB #5A5A5A
+.swiper-wrapper .swiper-slide.item11 {
+  .creator_gallary_card:after{
+    background: #5A5A5A;
+  }
+}
+
+
+
+
+
+.creator_gallary_intro {
+  width: 50%;
+  padding-left: 50px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    transform: translate(-50%, -50%); /* 真ん中に配置 */
+    width: 350px; /* 丸のサイズ */
+    height: 350px;
+    background: #faf4a6; /* 丸の色 */
+    border-radius: 50%;
+    z-index: -100;
+  }
+}
+
+.creator_gallary_intro_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 0 10px;
+}
+
+.creator_gallary_intro_title_name {
+  font-size: 42px;
+  font-family: "kei";
+}
+
+.creator_gallary_intro_title_link {
+  img {
+    width: 30px;
+  }
+}
+
+.creator_gallary_intro_title_line {
+  margin-top: 20px;
+  svg {
+    width: 100%;
+  }
+}
+
+.creator_gallary_intro_desc {
+  margin-top: 30px;
+  font-size: 20px;
+  font-family: "kosugi";
+  line-height: 1.5;
+}
+
+@keyframes scroll-bg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}

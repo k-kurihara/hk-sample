@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="TODO: ここにページの説明を入れる" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta name="viewport" content="width=1400">
     <title>TODO: タイトル</title>
     <link rel="stylesheet" href="{{ cssPath }}" />
   </head>
@@ -13,11 +14,17 @@
 
     <section id="concept">{{> concept }}</section>
 
-
     <section id="creator">{{> creator }}</section>
 
+    <section id="local">{{> local }}</section>
+
+    <section id="vtuber">{{> vtuber }}</section>
+
+    <section id="event">{{> pr }}</section>
+
+    <section id="sns">{{> sns }}</section>
+    <footer>{{> footer }}</footer>
 
     <script type="module" src="/src/main.js"></script>
-    <footer>{{> footer }}</footer>
   </body>
 </html>

@@ -1,0 +1,5 @@
+
+AuthUserFile "/home/rfns/hk-project.com/htpasswd/hannan-kawaii/.htpasswd"
+AuthName "Member Site"
+AuthType BASIC
+require valid-user

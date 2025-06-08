@@ -3,10 +3,12 @@
   padding: 40px 40px 20px;
   margin-top: 40px;
   position: relative;
+  z-index: 10;
   &::before {
     content: "";
     display: block;
     position: absolute;
+    z-index: 10;
     bottom: -50px;
     left: 0;
     width: 100vw;

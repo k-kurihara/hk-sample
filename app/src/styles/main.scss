@@ -6,6 +6,10 @@
 @use "./layout/footer";
 @use "./layout/concept";
 @use "./layout/creator";
+@use "./layout/sns";
+@use "./layout/local";
+@use "./layout/vtuber";
+@use "./layout/pr";
 
 // @use './utils/variables';
 // @use './base/reset';
@@ -176,10 +180,20 @@ img {
   width: 100%;
 }
 
+a{
+  transition: opacity .5s ease-out;
+}
+
+a:hover{
+  opacity: .8;  
+}
+
 .fade-in-target {
   opacity: 0;
   transform: translateY(100px); /* 少し下から */
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transition:
+    opacity 1s ease-out,
+    transform 1s ease-out;
   animation-delay: 1s;
 }
 
@@ -193,15 +207,27 @@ img {
   src: url("/fonts/mini-wakuwaku-maru.otf") format("opentype");
 }
 
-.mini-wakuwaku {
-  font-family: "mini-wakuwaku";
-}
 
 @font-face {
   font-family: "kei";
   src: url("/fonts/keifont.ttf") format("truetype");
 }
 
+
+@font-face {
+  font-family: "kosugi";
+  src: url("/fonts/KosugiMaru-Regular.ttf") format("truetype");
+}
+
+
 .kei {
   font-family: "kei";
+}
+
+.mini-wakuwaku {
+  font-family: "mini-wakuwaku";
+}
+
+.kosugi {
+  font-family: "kosugi";
 }
