@@ -1,5 +1,34 @@
-@use "../utils/tokens" as *;
-@use "../utils/media" as *;
+@use ".././utils/media";
+
+
+body {
+  font-family: sans-serif;
+  background-color: #fff;
+  min-width: 1280px;
+
+  @include media.mq(tab) {
+    min-width: auto;
+    max-width: 100vw;
+  }
+}
+
+
+.is-pc {
+  display: block;
+  @include media.mq(tab) {
+    display: none!important;
+  }
+}
+
+
+.is-sp {
+  display: none;
+  @include media.mq(tab) {
+    display: block;
+  }
+}
+
+
 
 .header {
   display: flex;

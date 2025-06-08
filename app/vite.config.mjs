@@ -8,7 +8,11 @@ export default defineConfig({
     handlebars({
       partialDirectory: resolve(__dirname, "src/layouts"),
       context: {
-        heading: "共通見出し",
+        title: "はんなんKawaiiプロジェクト",
+        description:"大阪府阪南市からサブカルチャーを発信！",
+        keywords:"大阪府,阪南市,イラストレーター,ご当地,VTuber,サブカルチャー",
+        ogImage: "https://hk-project.com/hannan-kawaii/images/og_img.png",
+        ogUrl: "https://hk-project.com/hannan-kawaii/",
         cssPath: "assets/main.css",
         tweets: [
           

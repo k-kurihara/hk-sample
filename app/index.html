@@ -1,11 +1,61 @@
 <!doctype html>
 <html lang="ja">
   <head>
+    <!-- 文字コード -->
     <meta charset="UTF-8" />
-    <meta name="description" content="TODO: ここにページの説明を入れる" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
-    <meta name="viewport" content="width=1400">
-    <title>TODO: タイトル</title>
+
+    <!-- インデックスとクロールの許可 -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- canonical（URLの正規化）-->
+    <link rel="canonical" href="{{ ogUrl }}" />
+
+    <!-- レスポンシブ対応（スマホ対応に必須）-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=1400" /> -->
+
+    <!-- TDK設定 -->
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}" />
+    <meta name="keywords" content="{{ keywords }}" />
+
+    <!-- favicon -->
+    <link
+      rel="icon"
+      href="https://hk-project.com/hannan-kawaii/images/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- サイトアイコン for iOS -->
+    <link
+      rel="apple-touch-icon"
+      href="https://hk-project.com/hannan-kawaii/images/favicon.png"
+    />
+
+    <!-- OGP設定 -->
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:image" content="{{ ogImage }}" />
+    <meta property="og:url" content="{{ ogUrl }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="{{ title }}" />
+
+    <!-- Twitterカード設定 -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ title }}" />
+    <meta name="twitter:description" content="{{ description }}" />
+    <meta name="twitter:image" content="{{ ogImage }}" />
+
+    <!-- 動作確認ツール -->
+    <!-- Facebook Debugger	: https://developers.facebook.com/tools/debug/ -->
+    <!-- Twitter Card Validator	: https://cards-dev.twitter.com/validator  -->
+
+    <!-- preload（Webフォントや重要CSSの先読み）-->
+    <!-- <link rel="preload" href="/fonts/your-font.woff2" as="font" type="font/woff2" crossorigin /> -->
+
+    <!-- テーマカラー（モバイルブラウザのアドレスバー色など）-->
+    <!-- <meta name="theme-color" content="#ffffff" /> -->
+
     <link rel="stylesheet" href="{{ cssPath }}" />
   </head>
   <body>
@@ -20,7 +70,7 @@
 
     <section id="vtuber">{{> vtuber }}</section>
 
-    <section id="event">{{> pr }}</section>
+    <section id="event">{{> event }}</section>
 
     <section id="sns">{{> sns }}</section>
     <footer>{{> footer }}</footer>

@@ -1,17 +1,17 @@
 .vtuber {
   position: relative;
   background-color: #c1e9e8;
-  background-image: url(".././images/creator/bg.png");
+  background-image: url(".././images/vtuber/repeat_bg.png");
   background-size: 1280px;
   background-position: center;
   // background-repeat: repeat;
 
-  background-repeat: repeat-x;
-  background-size: auto 100%;
+  background-repeat: repeat;
+  background-size: auto 50%;
   animation: scroll-bg 20s linear infinite;
 
   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
-  top: -200px;
+  top: -225px;
   padding-bottom: 0px;
 }
 
@@ -20,8 +20,9 @@
   position: relative;
   z-index: 2;
   display: inline-block;
-  margin-top: -30px;
-  margin-left: 700px;
+  position: absolute;
+  right: 50px;
+  top: -30px;
 
   img {
     width: 650px;
@@ -29,8 +30,9 @@
 }
 
 .vtuber_inner {
-  // width: 1000px;
   margin: 0 auto;
+  position: relative;
+  padding-top: 250px;
 }
 
 .vtuber_copy {
