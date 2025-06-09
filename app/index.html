@@ -17,7 +17,7 @@
     <!-- TDK設定 -->
     <title>{{ title }}</title>
     <meta name="description" content="{{ description }}" />
-    <meta name="keywords" content="{{ keywords }}" />
+    <!-- <meta name="keywords" content="{{ keywords }}" /> -->
 
     <!-- favicon -->
     <link
@@ -46,12 +46,25 @@
     <meta name="twitter:description" content="{{ description }}" />
     <meta name="twitter:image" content="{{ ogImage }}" />
 
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://platform.twitter.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "はんなんKawaiiプロジェクト",
+        "url": "https://hk-project.com/hannan-kawaii/",
+        "logo": "https://hk-project.com/hannan-kawaii/images/logo.png"
+      }
+    </script>
+
     <!-- 動作確認ツール -->
     <!-- Facebook Debugger	: https://developers.facebook.com/tools/debug/ -->
     <!-- Twitter Card Validator	: https://cards-dev.twitter.com/validator  -->
-
-    <!-- preload（Webフォントや重要CSSの先読み）-->
-    <!-- <link rel="preload" href="/fonts/your-font.woff2" as="font" type="font/woff2" crossorigin /> -->
 
     <!-- テーマカラー（モバイルブラウザのアドレスバー色など）-->
     <!-- <meta name="theme-color" content="#ffffff" /> -->
@@ -62,7 +75,7 @@
     <header>{{> header }}</header>
     <div>{{> kv }}</div>
 
-    <section id="concept">{{> concept }}</section>
+    <section class="anchor-target">{{> concept }}</section>
 
     <section id="creator">{{> creator }}</section>
 
@@ -70,9 +83,9 @@
 
     <section id="vtuber">{{> vtuber }}</section>
 
-    <section id="event">{{> event }}</section>
+    <section>{{> event }}</section>
 
-    <section id="sns">{{> sns }}</section>
+    <!-- <section id="sns">{{> sns }}</section> -->
     <footer>{{> footer }}</footer>
 
     <script type="module" src="/src/main.js"></script>

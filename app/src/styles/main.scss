@@ -219,6 +219,10 @@ a:hover {
   }
 }
 
+.anchor-target{
+  scroll-margin-top: 80px; 
+}
+
 .fade-in-target {
   opacity: 0;
   transform: translateY(100px); /* 少し下から */

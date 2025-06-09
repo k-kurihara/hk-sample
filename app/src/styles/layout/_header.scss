@@ -26,6 +26,10 @@ body {
   }
 }
 
+.anchor-target {
+  scroll-margin-top: 80px;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -38,6 +42,15 @@ body {
     position: relative;
     height: auto;
     padding: 10px 20px 20px;
+  }
+}
+
+.is-pc {
+  .header {
+    position: fixed;
+    z-index: 10000;
+    background: #fff;
+    width: 100%;
   }
 }
 
@@ -86,9 +99,9 @@ body {
 
 .header_goods {
   position: relative;
-    @include media.mq(tab) {
-      padding-right: 20px;
-    }
+  @include media.mq(tab) {
+    padding-right: 20px;
+  }
 
   &_text {
     position: relative;
@@ -153,6 +166,7 @@ body {
     display: flex;
     gap: 1rem;
     text-align: right;
+    background-color: #fff;
 
     li {
       list-style: none;
@@ -179,6 +193,11 @@ body {
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
+    position: relative;
+    z-index: 1000;
+    span {
+      background: #333;
+    }
   }
 
   .nav {
@@ -186,7 +205,6 @@ body {
     position: absolute;
     top: 100%;
     right: 0;
-    background: white;
     display: none;
     z-index: 100;
 
@@ -197,26 +215,6 @@ body {
 
     &.is-open {
       display: block;
-    }
-  }
-}
-
-// SP表示の時のみハンバーガー表示
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
-  .nav {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: white;
-    display: none;
-
-    ul {
-      flex-direction: column;
-      padding: 1rem;
     }
   }
 }
