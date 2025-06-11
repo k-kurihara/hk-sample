@@ -16,9 +16,7 @@ export default defineConfig({
         cssPath: "assets/main.css",
         version: "1_0_1",
         tweets: [
-          "https://twitter.com/akazukin870421/status/1858831692234191163?ref_src=twsrc%5Etfw",
-          "https://twitter.com/akazukin870421/status/1796952690905534908?ref_src=twsrc%5Etfw",
-          "https://twitter.com/akazukin870421/status/1796952690905534908?ref_src=twsrc%5Etfw",
+          "https://twitter.com/h_kawaiiproject/status/1932392297980944832?ref_src=twsrc%5Etfw",
         ],
       },
     }),

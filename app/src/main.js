@@ -61,17 +61,18 @@ setTimeout(()=>{
 const hamburger = document.getElementById('hamburger');
 const nav = document.getElementById('nav');
 
+// ハンバーガーメニューの開閉
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('is-open');
   nav.classList.toggle('is-open');
 });
 
+// nav内のaタグをすべて取得し、クリック時にメニューを閉じる
+const navLinks = nav.querySelectorAll('a');
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('is-open');
+    nav.classList.remove('is-open');
+  });
+});
 
-
-// window.addEventListener('load', () => {
-//   const tweets = document.querySelectorAll('iframe[src*="twitter.com"]');
-//   tweets.forEach(iframe => {
-//     iframe.style.width = '100%';
-//     iframe.style.maxWidth = '100%';
-//   });
-// });

@@ -39,19 +39,17 @@ body {
   @include media.mq(tab) {
     align-items: center;
     padding: 1rem;
-    position: relative;
-    height: auto;
-    padding: 10px 20px 20px;
+    position: fixed;
+    height: 60px;
+    padding: 10px 20px 10px;
   }
 }
 
-.is-pc {
-  .header {
-    position: fixed;
-    z-index: 10000;
-    background: #fff;
-    width: 100%;
-  }
+.header {
+  position: fixed;
+  z-index: 10000;
+  background: #fff;
+  width: 100%;
 }
 
 .logo {
@@ -62,6 +60,9 @@ body {
   }
   > img {
     width: 220px;
+    @include media.mq(tab) {
+      width: 120px;
+    }
   }
 }
 
@@ -139,7 +140,7 @@ body {
   padding: 0;
   z-index: 100; // メニューの上に表示
 
-  span {
+  .bar {
     display: block;
     height: 3px;
     background: #333;
@@ -148,20 +149,24 @@ body {
     transform-origin: center;
   }
 
-  &.is-open span:nth-child(1) {
+  &.is-open .bar:nth-child(1) {
     transform: rotate(45deg) translateY(10px);
   }
 
-  &.is-open span:nth-child(2) {
+  &.is-open .bar:nth-child(2) {
     opacity: 0;
   }
 
-  &.is-open span:nth-child(3) {
+  &.is-open .bar:nth-child(3) {
     transform: rotate(-45deg) translateY(-10px);
   }
 }
 
 .nav {
+  transition: 0.5s ease-in-out all;
+  position: relative;
+  right: -50%;
+  opacity: 0;
   ul {
     display: flex;
     gap: 1rem;
@@ -177,17 +182,6 @@ body {
       }
     }
   }
-
-  &.is-open {
-    display: block;
-  }
-}
-
-.nav {
-  transition: 0.3s ease;
-  &.is-open {
-    display: block;
-  }
 }
 
 @media (max-width: 768px) {
@@ -195,26 +189,26 @@ body {
     display: flex;
     position: relative;
     z-index: 1000;
-    span {
+    .bar {
       background: #333;
     }
   }
 
   .nav {
-    width: 30%;
+    width: 35%;
     position: absolute;
     top: 100%;
-    right: 0;
-    display: none;
     z-index: 100;
+    font-size: 1.2rem;
 
     ul {
       flex-direction: column;
       padding: 1rem;
+      border-bottom-left-radius: 12px;
     }
-
     &.is-open {
-      display: block;
+      opacity: 1;
+      right: 0;
     }
   }
 }

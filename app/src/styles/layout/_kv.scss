@@ -16,9 +16,7 @@
   background-repeat: repeat;
   background-size: auto 50%;
   animation: scroll-bg-kv 30s linear infinite;
-  &.is-pc{
-    padding: 80px 0;
-  }
+  padding: 80px 0;
 }
 
 @keyframes scroll-bg-kv {
@@ -32,9 +30,9 @@
 
 .kv_line {
   position: absolute;
-  bottom: 0;
+  bottom: 1%;
   display: inline-block;
-  left: 50%;
+  left: 49%;
   transform: translateX(-50%);
 
   // display: block;
@@ -78,6 +76,7 @@
   // padding-bottom: 31%;
   padding-bottom: 44%;
   left: -1%;
+  top: 1%;
 
   // border: solid 2px #000;
 }

@@ -2,7 +2,8 @@
 
 @include media.mq(tab) {
   .kv_sp {
-    min-height: calc(100vh - 82px);
+    min-height: calc(100vh - 60px);
+    padding-top: 60px;
   }
 
   .kv_sp_inner {

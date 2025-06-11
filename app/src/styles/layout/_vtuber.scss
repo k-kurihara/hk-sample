@@ -32,14 +32,15 @@
   right: 50px;
   top: -30px;
   @include media.mq(tab) {
-    right: 0;
-    top: 5px;
+    width: 60%;
+    right: 15px;
+    top: 0px;
   }
 
   img {
     width: 650px;
     @include media.mq(tab) {
-      width: 65%;
+      width: 100%;
     }
   }
 }
