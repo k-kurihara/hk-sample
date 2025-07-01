@@ -14,7 +14,7 @@ export default defineConfig({
         ogImage: "https://hk-project.com/hannan-kawaii/images/og_img.png",
         ogUrl: "https://hk-project.com/hannan-kawaii/",
         cssPath: "assets/main.css",
-        version: "1_0_1",
+        version: "1_0_2",
         tweets: [
           "https://twitter.com/h_kawaiiproject/status/1932392297980944832?ref_src=twsrc%5Etfw",
         ],

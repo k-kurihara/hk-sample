@@ -165,7 +165,9 @@ body {
 .nav {
   transition: 0.5s ease-in-out all;
   position: relative;
-  right: -50%;
+  // transform: translateX(100%);
+  right: 0;
+  // right: -50%;
   opacity: 0;
   ul {
     display: flex;
@@ -195,7 +197,6 @@ body {
   }
 
   .nav {
-    width: 35%;
     position: absolute;
     top: 100%;
     z-index: 100;
@@ -208,7 +209,7 @@ body {
     }
     &.is-open {
       opacity: 1;
-      right: 0;
+      // transform: translateX(0);
     }
   }
 }

@@ -97,16 +97,12 @@
 .creator_gallary_title {
   text-align: center;
 
-  span {
+  &_inner {
     display: inline-block;
     position: relative;
-    letter-spacing: 10px;
-    font-size: 90px;
-    font-family: "kei";
     @include media.mq(tab) {
-      font-size: 2rem;
-      line-height: 1.5;
-      display: inline;
+      display: block;
+      max-width: 100vw;
     }
 
     /* 上側：右向きの三角形 */
@@ -122,7 +118,7 @@
       border-right: 50px solid #ec70a7; /* → 尖った部分が左向き */
       transform: rotate(-125deg);
       @include media.mq(tab) {
-        left: -45%;
+        left: 2%;
       }
     }
 
@@ -139,8 +135,20 @@
       border-right: 50px solid #ec70a7; /* → 尖った部分が左向き */
       transform: rotate(-50deg);
       @include media.mq(tab) {
-        right: -33%;
+        right: 2%;
       }
+    }
+  }
+
+  span {
+    position: relative;
+    letter-spacing: 10px;
+    font-size: 90px;
+    font-family: "kei";
+    @include media.mq(tab) {
+      font-size: 2rem;
+      line-height: 1.5;
+      display: inline;
     }
   }
 }
